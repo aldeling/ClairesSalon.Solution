@@ -16,22 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `Clients`
+-- Table structure for table `clients`
 --
 
-LOCK TABLES `Clients` WRITE;
-/*!40000 ALTER TABLE `Clients` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Clients` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `clients`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `clients` (
+  `ClientId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `ClientCell` varchar(255) DEFAULT NULL,
+  `StylistId` int DEFAULT NULL,
+  PRIMARY KEY (`ClientId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Stylists`
+-- Table structure for table `stylists`
 --
 
-LOCK TABLES `Stylists` WRITE;
-/*!40000 ALTER TABLE `Stylists` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Stylists` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `stylists`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `stylists` (
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Details` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -42,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-31 13:37:58
+-- Dump completed on 2023-01-06 13:55:15
